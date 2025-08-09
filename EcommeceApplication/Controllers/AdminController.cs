@@ -47,5 +47,11 @@ namespace EcommeceApplication.Controllers
             HttpContext.Session.Remove("admin_session");
             return RedirectToAction("login");
         }
+        public IActionResult profile()
+        {
+            var adminId = HttpContext.Session.GetString("admin_session");
+            var row = _context.tbl_admin.Where(a=>a.admin_id == int.Parse(adminId));
+            return View(row);
+        }   
     }
 }

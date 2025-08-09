@@ -1,0 +1,26 @@
+﻿@model Admin
+<div class="container-fluid px-4">
+    <h2 class="mt-4 text-center text-uppercase" style="letter-spacing:4px">My profile</h2>
+</div>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form action="/" method="post" >
+            <input type="hidden" name="admin_id" value="@Model.admin_id"/>
+            <div>
+                <label for="username">Admin name:</label>
+                <input type="text" id="username" name="admin_name" value="@Model.admin_name" required class="form-control my-3" />
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="admin_email" value="@Model.admin_email" required class="form-control my-3" />
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="admin_password" value="@Model.admin_password" required class="form-control my-3" />
+            </div>
+            <button type="submit" class="form-control my-3 btn btn-primary">Update Profile</button>
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>

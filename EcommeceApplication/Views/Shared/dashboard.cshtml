@@ -28,7 +28,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Profile</a></li>
+                    <li><a class="dropdown-item" href="@Url.Action("profile", "Admin")">Profile</a></li>
                     <li><hr class="dropdown-divider" /></li>
                     <li><a class="dropdown-item" href="@Url.Action("logout","Admin")">Logout</a></li>
                 </ul>
@@ -44,7 +44,7 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
                             Home
                         </a>
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="@Url.Action("profile","Admin")">
                             <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                             Profile
                         </a>
@@ -79,9 +79,7 @@
         <!-- Right Side Content Start -->
         <div id="layoutSidenav_content">
             <main>
-                <div class="container-fluid px-4">
-                    <h2 class="mt-4 text-center text-uppercase" style="letter-spacing:4px">Ecommerce Website</h2>
-                </div>
+                
                 <div>
                     @RenderBody()
                 </div>
